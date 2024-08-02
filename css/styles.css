@@ -7,6 +7,7 @@
 /* available in any container  */
 :root {
   --primary-color: #fcf5e9;
+  --dark-color: #333;
   --container-normal: 1100px;
   --container-wide: 1400px;
   --container-narrow: 900px;
@@ -32,6 +33,37 @@ img {
 /* utility classes */
 .bg-primary {
   background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #333;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
 }
 
 .container {
@@ -178,6 +210,43 @@ img {
 
   a {
     margin: 0.2rem;
+  }
+}
+
+/* Contact page */
+.contact {
+  padding: 3rem 0 4rem;
+
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin: 2rem 0;
+  }
+
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px #333 solid;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    padding-bottom: 1rem;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  textarea {
+    height: 200px;
+    resize: none;
+  }
+
+  button {
+    width: 100%;
   }
 }
 
