@@ -115,6 +115,33 @@ img {
   }
 }
 
+/* Footer */
+.footer {
+  border-top: 1px solid #aaa;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 120px;
+    height: 35px;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    margin: 0.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     .header-flex {
@@ -134,6 +161,14 @@ img {
   .gallery-flex {
     .gallery-item {
       width: calc(50% - 20px);
+    }
+  }
+
+  .footer {
+    .footer-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
     }
   }
 }
