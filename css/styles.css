@@ -94,6 +94,27 @@ img {
   }
 }
 
+.gallery-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .gallery-item {
+    /* each image gets 33% minus the gap */
+    width: calc(33.33% - 20px);
+    border-radius: 10px;
+
+    img {
+      border-radius: 10px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     .header-flex {
@@ -107,6 +128,12 @@ img {
 
     h2 {
       font-size: 1.8rem;
+    }
+  }
+
+  .gallery-flex {
+    .gallery-item {
+      width: calc(50% - 20px);
     }
   }
 }
